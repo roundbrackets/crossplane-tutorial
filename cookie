@@ -1,0 +1,5 @@
+kubectl -n argocd patch secret argocd-secret \
+  -p '{"stringData": {
+    "admin.password": "$2a$10$V9d6H1KvQ12U4NWE.3PVHuQdFn3kZVty6jKPoYdzUpjaDWHBFb/ZO",
+    "admin.passwordMtime": "'$(date +%FT%T%Z)'"
+  }}'
